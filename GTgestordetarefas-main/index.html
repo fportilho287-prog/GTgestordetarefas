@@ -1,0 +1,93 @@
+ <!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="cabecalho">
+        
+      <h2>Tarefas</h2>
+        
+    </header>
+        <button onclick="abrirJanela()" type="reset" class="botao">
+          Nova Tarefa
+        </button>
+<hr>
+    <main>
+    <div id="overlay" class="overlay" onclick="fecharJanela()"></div>
+    
+    <div id="minhaJanela" class="janela-flutuante">
+        
+          <div id="cabecalho">
+            <h2>Nova Tarefa</h2>
+          </div>
+
+        <form><!------------JANELA FLUTUANTE--------------->
+            <label for="titulo">Título:</label>
+              <input type="text" id="titulo" name="titulo" placeholder="Ex: Preparar relatório mensal">
+          <br>
+
+            <label for="Descrição">Descrição:</label>
+              <input type="textarea" id="descrição" name="titulo" placeholder="Detalhes da tareja...">
+          <br>
+
+            <label for="Responsável">Responsável:</label>
+              <input type="textarea" id="responsável="titulo" placeholder="Ex: Preparar relatório mensal">
+          <br>
+
+            <label for="area">Área:</label><br>
+              <select id="area" name="area">
+                <option value="">Selecione...</option>
+                <option value="PMLS">Manutenção</option>
+                <option value="IVD">TI</option>
+            </select><br>
+
+          <label for="Unidade Hospitalar">Unidade Hospitalar:</label>
+          <input type="text" id="un.hospitalar" name="Unidade Hospitalar" placeholder="Ex: Preparar relatório mensal">
+          <br>
+
+          <label for="Equipamento">Equipamento:</label>
+          <input type="textarea" id="equipamento" name="Equipamento" placeholder="Ex: Preparar relatório mensal">
+          <br>
+
+          <label for="Prioridade">Prioridade:</label>
+            <select id="prioridade" name="Prioridade">
+              <option value="">Selecione...</option>
+              <option value="Alta">Alta</option>
+              <option value="Média">Média</option>
+              <option value="Baixa">Baixa</option>
+          </select><br>
+
+          <label for="Status">Status:</label>
+            <select id="status" name="Status">
+              <option value="">Selecione...</option>
+              <option value="Pendente"></option>
+              <option value="Em Andamento"></option>
+              <option value="Concluido"></option>
+            </select><br
+
+          <label for="Data de Entrega">Data de Entrega:</label>
+          <input type="data" id="data.entrega" name="Data de Entrega" placeholder="Ex: Preparar relatório mensal">
+          <br>
+
+          <button type="reset" class="botaoc">Cancelar:</button>
+
+          <button type="submit" class="botao">Criar:</button>
+
+        </form><!-----------------FIM JANELA------------------>
+    </div>
+    <div>
+        <hr>
+
+        <h2>area de tarefas</h2>
+    </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
