@@ -1,0 +1,40 @@
+/*=========================CABEÇALHO===================*/
+
+#cabecalho{
+   color: #ffce09;
+   padding: 15px;
+}
+
+
+
+hr {
+    border: none;
+    height: 2px;
+    background-color:#2d2d2d;
+}
+
+/*==================LOGIN==============*/
+.infoaera{
+
+}
+
+.login{
+     width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background: #2d2d2d;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px #0000001a;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: all .3s ease;
+}   
+
+#img_login{
+ float: left;
+}
+
+#img_logo {
+ width: 331px;
+ height: 210px;
+}

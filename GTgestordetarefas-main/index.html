@@ -1,93 +1,86 @@
- <!DOCTYPE html>
-<html lang="pt">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Fibonacci Chat | Login</title>
+
+    <!-- Estilos 
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/cabecalho.css">-->
+    <link rel="stylesheet" href="CSS/login.css">
 </head>
-<body>
-    <header id="cabecalho">
-        
-      <h2>Tarefas</h2>
-        
-    </header>
-        <button onclick="abrirJanela()" type="reset" class="botao">
-          Nova Tarefa
-        </button>
-<hr>
-    <main>
-    <div id="overlay" class="overlay" onclick="fecharJanela()"></div>
-    
-    <div id="minhaJanela" class="janela-flutuante">
-        
-          <div id="cabecalho">
-            <h2>Nova Tarefa</h2>
-          </div>
 
-        <form><!------------JANELA FLUTUANTE--------------->
-            <label for="titulo">Título:</label>
-              <input type="text" id="titulo" name="titulo" placeholder="Ex: Preparar relatório mensal">
-          <br>
+<body class="dark">
+    <main class="container">
 
-            <label for="Descrição">Descrição:</label>
-              <input type="textarea" id="descrição" name="titulo" placeholder="Detalhes da tareja...">
-          <br>
+        <!-- Coluna esquerda (imagem de fundo / destaque) -->
+        <section class="banner">
+            <img src="IMG/img_login.jpg" alt="Imagem ilustrativa do sistema">
+        </section>
 
-            <label for="Responsável">Responsável:</label>
-              <input type="textarea" id="responsável="titulo" placeholder="Ex: Preparar relatório mensal">
-          <br>
+        <!-- Coluna direita (login) -->
+        <section class="login">
 
-            <label for="area">Área:</label><br>
-              <select id="area" name="area">
-                <option value="">Selecione...</option>
-                <option value="PMLS">Manutenção</option>
-                <option value="IVD">TI</option>
-            </select><br>
+            <!-- Logo -->
+            <div class="login-logo">
+                <img src="IMG/img_logo_dark.png" alt="Logo Bia Chat">
+            </div>
 
-          <label for="Unidade Hospitalar">Unidade Hospitalar:</label>
-          <input type="text" id="un.hospitalar" name="Unidade Hospitalar" placeholder="Ex: Preparar relatório mensal">
-          <br>
+            <!-- Título -->
+            <header class="login-header">
+                <h1>Bem-vindo de volta!</h1>
+                <p>Por favor, faça login na sua conta</p>
+            </header>
 
-          <label for="Equipamento">Equipamento:</label>
-          <input type="textarea" id="equipamento" name="Equipamento" placeholder="Ex: Preparar relatório mensal">
-          <br>
+            <!-- Formulário -->
+            <form action="gerenciador.html" method="GET" class="login-form">
 
-          <label for="Prioridade">Prioridade:</label>
-            <select id="prioridade" name="Prioridade">
-              <option value="">Selecione...</option>
-              <option value="Alta">Alta</option>
-              <option value="Média">Média</option>
-              <option value="Baixa">Baixa</option>
-          </select><br>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+                </div>
 
-          <label for="Status">Status:</label>
-            <select id="status" name="Status">
-              <option value="">Selecione...</option>
-              <option value="Pendente"></option>
-              <option value="Em Andamento"></option>
-              <option value="Concluido"></option>
-            </select><br
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input 
+                        type="password" 
+                        id="senha" 
+                        name="senha" 
+                        placeholder="Digite sua senha"
+                        required
+                    >
+                </div>
 
-          <label for="Data de Entrega">Data de Entrega:</label>
-          <input type="data" id="data.entrega" name="Data de Entrega" placeholder="Ex: Preparar relatório mensal">
-          <br>
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox" name="remember">
+                        Lembrar-me
+                    </label>
 
-          <button type="reset" class="botaoc">Cancelar:</button>
+                    <a href="#" class="forgot-password">
+                        Esqueceu sua senha?
+                    </a>
+                </div>
 
-          <button type="submit" class="botao">Criar:</button>
+                    <button type="submit" class="btn-login">
+                        Iniciar Sessão
+                    </button>
+                    <p class="register">
+                        Não tem uma conta?
+                        <a href="#">Inscreva-se</a>
+                    </p>
+                
 
-        </form><!-----------------FIM JANELA------------------>
-    </div>
-    <div>
-        <hr>
-
-        <h2>area de tarefas</h2>
-    </div>
+            </form>
+        </section>
 
     </main>
-
-    <script src="script.js"></script>
 </body>
 </html>
-

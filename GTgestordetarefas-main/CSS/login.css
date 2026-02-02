@@ -1,0 +1,266 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f4f6f8;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* BANNER (LADO ESQUERDO) */
+.banner {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* LOGIN (LADO DIREITO) */
+.login {
+    width: 420px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.08);
+}
+
+/* LOGO */
+.login-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.login-logo img {
+    max-width: 340px;
+}
+
+/* TÍTULO */
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.login-header p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* FORMULÁRIO */
+.login-form {
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #8b0000;
+    box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.15);
+}
+
+/* OPÇÕES */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0 20px;
+    font-size: 13px;
+}
+
+.form-options label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #444;
+}
+
+.form-options a {
+    text-decoration: none;
+    color: #0066cc;
+}
+
+.form-options a:hover {
+    text-decoration: underline;
+}
+
+/* BOTÃO */
+.btn-login {
+    width: 100%;
+    height: 44px;
+    background-color: #8b0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-login:hover {
+    background-color: #6f0000;
+}
+
+/* REGISTRO */
+.register {
+    margin-top: 18px;
+    font-size: 13px;
+    text-align: center;
+    color: #555;
+}
+
+.register a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .banner {
+        display: none;
+    }
+
+    .login {
+        width: 100%;
+        box-shadow: none;
+    }
+}
+
+/* =========================
+   MODO ESCURO (LARANJA)
+   ========================= */
+body.dark {
+    background-color: #0f1115;
+}
+
+/* CONTAINER */
+body.dark .login {
+    background-color: #161a20;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.6);
+}
+
+/* TÍTULOS */
+body.dark .login-header h1 {
+    color: #ffffff;
+}
+
+body.dark .login-header p {
+    color: #b0b3b8;
+}
+
+/* LABELS */
+body.dark .form-group label {
+    color: #d1d5db;
+}
+
+/* INPUTS */
+body.dark .form-group input {
+    background-color: #0f1115;
+    border: 1px solid #2a2f38;
+    color: #ffffff;
+}
+
+body.dark .form-group input::placeholder {
+    color: #8a8f98;
+}
+
+body.dark .form-group input:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 0 2px rgba(255, 140, 0, 0.25);
+}
+
+/* OPÇÕES */
+body.dark .form-options label {
+    color: #c7c9cc;
+}
+
+body.dark .form-options a {
+    color: #ffcc00;
+}
+
+/* BOTÃO */
+body.dark .btn-login {
+    background-color: #ffcc00;
+    color: #111111;
+}
+
+body.dark .btn-login:hover {
+    background-color: #ffcc00;
+}
+
+/* REGISTRO */
+body.dark .register {
+    color: #aeb2b8;
+}
+
+body.dark .register a {
+    color: #ffcc00;
+}
+
+/* CHECKBOX */
+body.dark input[type="checkbox"] {
+    accent-color: #ffcc00;
+}
+
+/* BANNER OVERLAY */
+body.dark .banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(15, 17, 21, 0.65),
+        rgba(15, 17, 21, 0.85)
+    );
+}
